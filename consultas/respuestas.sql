@@ -66,6 +66,35 @@ WHERE check_in_date = 20180109
   AND membership_id LIKE '48Z%';
 
 
+-- ==========================================================
+-- 5. Confirmar al asesino
+-- ==========================================================
 
+-- Comparé los sospechosos con las licencias de conducción.
+SELECT p.id,
+       p.name,
+       dl.plate_number,
+       dl.car_make,
+       dl.car_model
+FROM person AS p
+JOIN drivers_license AS dl
+  ON p.license_id = dl.id
+JOIN get_fit_now_member AS gfnm
+  ON p.id = gfnm.person_id
+WHERE gfnm.id LIKE '48Z%'
+  AND dl.plate_number LIKE '%H42W%';
+
+-- Consulta de apoyo: revisar placas de Joe y Jeremy.
+SELECT p.id,
+       p.name,
+       dl.plate_number
+FROM person AS p
+JOIN drivers_license AS dl
+  ON p.license_id = dl.id
+WHERE p.name IN ('Joe Germuska', 'Jeremy Bowers');
+
+-- Verificación del asesino material en la plataforma.
+INSERT INTO solution VALUES (1, 'Jeremy Bowers');
+SELECT value FROM solution;
 
 

@@ -133,5 +133,66 @@ WHERE check_in_date = 20180109
 ![alt text](evidencia/IMG_06.png)
 ![alt text](evidencia/IMG_07.png)
 
+### Confirmar al asesino
 
+**Qué quería averiguar:** decidir cuál de los dos sospechosos coincidía con la pista de la placa `H42W`.
+
+**Consultas:**
+
+```sql
+SELECT p.id,
+       p.name,
+       dl.plate_number,
+       dl.car_make,
+       dl.car_model
+FROM person AS p
+JOIN drivers_license AS dl
+  ON p.license_id = dl.id
+JOIN get_fit_now_member AS gfnm
+  ON p.id = gfnm.person_id
+WHERE gfnm.id LIKE '48Z%'
+  AND dl.plate_number LIKE '%H42W%';
+```
+
+```sql
+SELECT p.id,
+       p.name,
+       dl.plate_number
+FROM person AS p
+JOIN drivers_license AS dl
+  ON p.license_id = dl.id
+WHERE p.name IN ('Joe Germuska', 'Jeremy Bowers');
+```
+
+```sql
+SELECT *
+FROM get_fit_now_member
+WHERE name IN ('Joe Germuska', 'Jeremy Bowers');
+```
+
+**Evidencias:**
+
+![alt text](evidencia/IMG_08.png)
+![alt text](evidencia/IMG_09.png)
+![alt text](evidencia/IMG_10.png)
+
+
+
+**Lo que encontré:** el único que coincidía con la placa era **Jeremy Bowers**, así que lo identifico como el asesino material.
+
+
+**Verificación en la plataforma**
+
+```sql
+INSERT INTO solution VALUES (1, 'Jeremy Bowers');
+SELECT value FROM solution;
+```
+
+**Evidencia:**
+
+![alt text](evidencia/IMG_11.png)
+
+## Conclusión
+
+Con este proceso pude resolver el caso en el cual se encuentrea que **Jeremy Bowers** fue quien ejecutó el asesinato.
 
