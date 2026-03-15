@@ -6,7 +6,7 @@
 
 ## Resumen del caso
 
-En esta investigación se analizó la base de datos de **SQL Murder Mystery** para identificar al responsable del asesinato ocurrido el **15 de enero de 2018 en SQL City**. A partir de los reportes del crimen, las entrevistas de los testigos, los registros del gimnasio y los datos de licencias, se concluyó que el **asesino material fue ________**. 
+En esta investigación se analizó la base de datos de **SQL Murder Mystery** para identificar al responsable del asesinato ocurrido el **15 de enero de 2018 en SQL City**. A partir de los reportes del crimen, las entrevistas de los testigos, los registros del gimnasio y los datos de licencias, se concluyó que el **asesino material fue Jeremy Bowers**. 
 
 ----
 
@@ -194,5 +194,5 @@ SELECT value FROM solution;
 
 ## Conclusión
 
-Con este proceso pude resolver el caso en el cual se encuentrea que **Jeremy Bowers** fue quien ejecutó el asesinato.
+Con este proceso pude resolver el caso en el cual se encuentra que **Jeremy Bowers** fue quien ejecutó el asesinato.
 
