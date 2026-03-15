@@ -55,6 +55,34 @@ WHERE city = 'SQL City'
 ![alt text](evidencia/IMG_01.png)
 ![alt text](evidencia/IMG_02.png)
 
+### Identificación de los testigos
+
+**Qué quería averiguar:** encontrar quiénes eran exactamente los dos testigos mencionados en el reporte.
+
+**Consulta para ubicar a Annabel**
+
+```sql
+SELECT id, name, address_number, address_street_name
+FROM person
+WHERE name LIKE '%Annabel%'
+  AND address_street_name = 'Franklin Ave';
+```
+
+**Consulta para encontrar la última casa de Northwestern Dr**
+
+```sql
+SELECT id, name, address_number, address_street_name
+FROM person
+WHERE address_street_name = 'Northwestern Dr'
+ORDER BY address_number DESC
+LIMIT 1;
+```
+
+**Evidencias:**
+
+![alt text](evidencia/IMG_03.png)
+![alt text](evidencia/IMG_04.png)
+
 
 
 
