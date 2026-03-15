@@ -1,6 +1,7 @@
 # Laboratorio 2: SQL Murder Mystery
 
 **Estudiante:** Esteban Luna Seña.
+
 **Curso:** Estructura de datos y laboratorio.
 
 ## Resumen del caso
@@ -17,7 +18,42 @@ Como base de investigación se entrega el siguiente **diagrama como  mapa base p
 
 ----
 
+## Forma de la entrega
+
+- En `consultas/respuestas.sql` están las consultas principales y también varias consultas de apoyo.
+- En `evidencia/`  las capturas por pasos para poder subir varias imágenes por cada parte del proceso.
+- En este `README.md` se tiene el paso a paso de lo que hice y qué encontré.
+
+----
+
 ## Bitácora de investigación
+
+### Revisión del reporte del crimen
+
+**Qué quería averiguar:** encontrar el reporte exacto del asesinato para no empezar a buscar información al azar, es decir, en la fecha del asesinato luego de identificar la base de datos.
+
+**Consultas**
+
+```sql
+SELECT *
+FROM crime_scene_report
+WHERE date = 20180115
+  AND city = 'SQL City'
+  AND type = 'murder';
+```
+
+```sql
+SELECT *
+FROM crime_scene_report
+WHERE city = 'SQL City'
+  AND date = 20180115;
+```
+
+**Lo que encontré:** el reporte decía que había dos testigos. Uno vivía en la última casa de `Northwestern Dr` y la otra testigo se llamaba **Annabel** y vivía en `Franklin Ave`.
+
+**Evidencias:**
+![alt text](evidencia/IMG_01.png)
+![alt text](evidencia/IMG_02.png)
 
 
 
