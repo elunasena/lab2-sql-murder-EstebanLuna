@@ -1,10 +1,15 @@
 # Laboratorio 2: SQL Murder Mystery
 
 **Estudiante:** Esteban Luna Seña.
+
 **Curso:** Estructura de datos y laboratorio.
+
 **Semestre:** 2026-01.
+
 **Programa de Ingeniería de Sistemas**.
+
 **Facultad de Ingeniería**.
+
 **Universidad de Antioquia**.
 
 
