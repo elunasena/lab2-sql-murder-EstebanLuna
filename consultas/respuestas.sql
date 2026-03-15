@@ -4,7 +4,7 @@
 -- ==========================================================
 
 -- ==========================================================
--- Revisar el reporte del crimen
+-- 1. Revisar el reporte del crimen
 -- ==========================================================
 
 -- Consulta principal: ubicar el asesinato ocurrido en SQL City en la fecha dada.
@@ -21,7 +21,7 @@ WHERE city = 'SQL City'
   AND date = 20180115;
 
 -- ==========================================================
--- Identificar a los testigos
+-- 2. Identificar a los testigos
 -- ==========================================================
 
 -- Testigo 1: Annabel en Franklin Ave.
@@ -37,6 +37,17 @@ WHERE address_street_name = 'Northwestern Dr'
 ORDER BY address_number DESC
 LIMIT 1;
 
+-- ==========================================================
+-- 3. Leer las entrevistas
+-- ==========================================================
+
+-- Consulté ambas entrevistas juntas.
+-- Entrevista de Morty Schapiro.
+-- Entrevista de Annabel Miller.
+
+SELECT *
+FROM interview
+WHERE person_id IN (16371, 14887);
 
 
 

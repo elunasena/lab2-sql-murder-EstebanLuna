@@ -28,7 +28,7 @@ Como base de investigación se entrega el siguiente **diagrama como  mapa base p
 
 ## Bitácora de investigación
 
-### Revisión del reporte del crimen
+### 1. Revisión del reporte del crimen
 
 **Qué quería averiguar:** encontrar el reporte exacto del asesinato para no empezar a buscar información al azar, es decir, en la fecha del asesinato luego de identificar la base de datos.
 
@@ -55,7 +55,7 @@ WHERE city = 'SQL City'
 ![alt text](evidencia/IMG_01.png)
 ![alt text](evidencia/IMG_02.png)
 
-### Identificación de los testigos
+### 2. Identificación de los testigos
 
 **Qué quería averiguar:** encontrar quiénes eran exactamente los dos testigos mencionados en el reporte.
 
@@ -84,7 +84,29 @@ LIMIT 1;
 ![alt text](evidencia/IMG_04.png)
 
 
+### 3. Leer las entrevistas de los testigos
 
+**Qué quería averiguar:** obtener las pistas directas que dieron los testigos.
+
+**Consultas:**
+
+```sql
+SELECT *
+FROM interview
+WHERE person_id IN (16371, 14887);
+```
+
+**Lo que encontré:** de las entrevistas saqué estas pistas principales:
+
+- el asesino tenía una bolsa de **Get Fit Now Gym**,
+- era miembro **gold**,
+- la membresía empezaba por **48Z**,
+- estuvo en el gimnasio el **9 de enero de 2018**,
+- y su carro tenía una placa que incluía **H42W**.
+
+**Evidencias de este paso**
+
+![alt text](evidencia/IMG_05.png)
 
 
 
