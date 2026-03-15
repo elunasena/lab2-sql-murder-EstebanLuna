@@ -49,7 +49,21 @@ SELECT *
 FROM interview
 WHERE person_id IN (16371, 14887);
 
+-- ==========================================================
+-- 4. Filtrar sospechosos con las pistas del gimnasio
+-- ==========================================================
 
+-- Primero revisé los miembros gold cuya membresía empieza por 48Z.
+SELECT *
+FROM get_fit_now_member
+WHERE id LIKE '48Z%'
+  AND membership_status = 'gold';
+
+-- Luego revisé quiénes hicieron check-in el 9 de enero de 2018.
+SELECT *
+FROM get_fit_now_check_in
+WHERE check_in_date = 20180109
+  AND membership_id LIKE '48Z%';
 
 
 

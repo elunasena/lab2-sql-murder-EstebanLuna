@@ -108,6 +108,30 @@ WHERE person_id IN (16371, 14887);
 
 ![alt text](evidencia/IMG_05.png)
 
+### 4. Filtrar sospechosos usando los datos del gimnasio
+
+**Qué quería averiguar:** reducir la búsqueda a las personas que cumplieran con las pistas del gimnasio.
+
+**Consultas:**
+
+
+```sql
+SELECT *
+FROM get_fit_now_member
+WHERE id LIKE '48Z%'
+  AND membership_status = 'gold';
+```
+
+```sql
+SELECT *
+FROM get_fit_now_check_in
+WHERE check_in_date = 20180109
+  AND membership_id LIKE '48Z%';
+```
+**Lo que encontré:** después de cruzar esas condiciones, quedan dos sospechosos: **Joe Germuska** y **Jeremy Bowers**.
+
+![alt text](evidencia/IMG_06.png)
+![alt text](evidencia/IMG_07.png)
 
 
 
